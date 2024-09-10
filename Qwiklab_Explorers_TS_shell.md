@@ -11,7 +11,7 @@ export ZONE=
 ```
 gcloud services enable sqladmin.googleapis.com --project=$DEVSHELL_PROJECT_ID
 
-gcloud sql instances create postgresql-db --zone=$ZONE --database-version=POSTGRES_14 --tier=db-custom-1-3840 --root-password=awesome --edition=ENTERPRISE
+gcloud sql instances create postgresql-db --zone=$ZONE --database-version=POSTGRES_14 --tier=db-custom-1-3840 --root-password=QWIKLAB_EXPLORERS_TS --edition=ENTERPRISE
 
 gcloud sql databases create petsdb --instance=postgresql-db
 
@@ -31,6 +31,12 @@ gcloud sql instances patch $INSTANCE_NAME --authorized-networks=$EXTERNAL --quie
 
 gcloud compute ssh test-client --zone=$ZONE --quiet --command "sudo apt-get update && sudo apt-get install -y default-mysql-client && mysql --host=$PUBLIC_IP --user=root --password"
 
+```
+
+- ## Password :
+
+```
+QWIKLAB_EXPLORERS_TS
 ```
 
 # Congratulations ..!!🎉  You completed the lab shortly..😃💯
